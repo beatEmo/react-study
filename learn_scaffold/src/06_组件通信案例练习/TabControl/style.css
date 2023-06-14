@@ -1,0 +1,19 @@
+.tab-contorl {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  height: 40px;
+  text-align: center;
+}
+
+.tab-contorl .item {
+  flex: 1;
+}
+
+.tab-contorl .item.active {
+  color: red;
+}
+.tab-contorl .item.active span {
+  padding: 3px;
+  border-bottom: 3px solid red;
+}

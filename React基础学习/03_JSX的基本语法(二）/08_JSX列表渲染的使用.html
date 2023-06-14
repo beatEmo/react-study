@@ -1,0 +1,72 @@
+react
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        border: 1px solid orange;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            students: [
+              { id: 111, name: "kobe", score: 199 },
+              { id: 222, name: "盖里", score: 97 },
+              { id: 333, name: "刘昂", score: 190 },
+              { id: 444, name: "我知道啊", score: 199 }
+            ]
+          };
+        }
+
+        render() {
+          const { students } = this.state;
+
+          const filterStudent = students
+            .filter((student) => student.score > 100)
+            .slice(0, 2);
+
+          return (
+            <div>
+              <h2>学生列表数据</h2>
+              <div className="list">
+                {/* 列表展示 分数大于100的前俩条数据 */}
+                {students
+                  .filter((student) => student.score > 100)
+                  .slice(0, 2)
+                  .map((student) => {
+                    return (
+                      <div className="item" key={student.id}>
+                        <h2>学号：{student.id}</h2>
+                        <h2>姓名：{student.name}</h2>
+                        <h2>得分：{student.score}</h2>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
+          );
+        }
+      }
+
+      // 1. 创建root 渲染组件App
+      const root = ReactDOM.createRoot(document.getElementById("app"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

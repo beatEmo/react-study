@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            title: "哈哈哈 ",
+            imgUrl:
+              "https://cn.bing.com/images/search?q=%E7%BA%B3%E8%A5%BF%E5%A6%B2%E5%9B%BE%E7%89%87&FORM=IQFRBA&id=DDC14647C215B9957F57F8EA88FAC7B473053828",
+            href: "www.baidu.com",
+
+            isActive: true,
+
+            styleObj: {
+              color: "skyblue",
+              fontSize: "40px"
+            }
+          };
+        }
+
+        render() {
+          const { title, imgUrl, href, isActive, styleObj } = this.state;
+
+          // 需求：isActive为true clss加上active类名
+          // 1. 方法一：动态拼接字符串
+          const className = `abc cba ${isActive ? "active" : ""}`;
+          // 2. 方法二：将所有class放到数组中
+          const classList = ["abc", "cba"];
+          if (isActive) classList.push("active");
+          // 3. 方法三：使用第三方库classnames 以后讲
+
+          return (
+            <div>
+              {/* 绑定style */}
+              <h2 style={{ color: "red", fontSize: "20px" }}>呵呵</h2>
+              <h2 style={styleObj}>呵呵</h2>
+
+              {/*绑定class*/}
+              <h2 className={className}>第一种</h2>
+              <h2 className={classList.join(" ")}>第二种</h2>
+
+              {/* 绑定属性 */}
+              <h2 title={title}>这是一个h2</h2>
+              <img crossorigin="anonymous" src={imgUrl} alt="" />
+              <a href={href}>百度一下</a>
+            </div>
+          );
+        }
+      }
+
+      // 1. 创建root 渲染组件App
+      const root = ReactDOM.createRoot(document.getElementById("app"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            message: "Hello World"
+          };
+        }
+
+        render() {
+          const { message } = this.state;
+
+          // 将下面的结构去到 babel官网可以看到具体的转换
+          return (
+            <div>
+              <div className="header">Header</div>
+              <div className="content">
+                <ul>
+                  <li>列表数据*1</li>
+                  <li>列表数据*2</li>
+                  <li>列表数据*3</li>
+                  <li>列表数据*4</li>
+                  <li>列表数据*5</li>
+                </ul>
+              </div>
+              <div className="footer">Footer</div>
+            </div>
+          );
+        }
+      }
+
+      // 1. 创建root 渲染组件App
+      const root = ReactDOM.createRoot(document.getElementById("app"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

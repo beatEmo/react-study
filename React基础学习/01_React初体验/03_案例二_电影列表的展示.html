@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- 添加依赖 -->
+    <script src="../lib/react.js" crossorigin></script>
+    <script src="../lib/react-dom.js" crossorigin></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            movies: ["大话西游", "流浪地球", "独行月球", "吞噬星空"]
+          };
+        }
+
+        render() {
+          return (
+            <div>
+              <h2>电影列表</h2>
+              <ul>
+                {this.state.movies.map((movie) => (
+                  <li key={movie}>{movie}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+      }
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>

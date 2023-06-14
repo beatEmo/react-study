@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            message: "Hello World"
+          };
+        }
+
+        btnClick(event, name, age) {
+          console.log("btnClick", event, this);
+          console.log("name, age", name, age);
+        }
+
+        render() {
+          const { message } = this.state;
+          return (
+            <div>
+              {/* 1. event参数的传递 */}
+              {/* 默认传了一个event的参数 */}
+              <button onClick={this.btnClick.bind(this)}>按钮1</button>
+              {/* 手动用箭头函数传递event参数 */}
+              <button onClick={(event) => this.btnClick(event)}>按钮2</button>
+
+              {/* 2. 额外的参数传递 */}
+              {/* 事件参数跑到了函数末尾age 不推荐 */}
+              <button onClick={this.btnClick.bind(this, "www", 18)}>
+                按钮3
+              </button>
+              {/* 推荐写法 */}
+              <button onClick={(event) => this.btnClick(event, "www", 18)}>
+                按钮4
+              </button>
+            </div>
+          );
+        }
+      }
+
+      // 1. 创建root 渲染组件App
+      const root = ReactDOM.createRoot(document.getElementById("app"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            message: "Hello World"
+          };
+        }
+
+        render() {
+          const { message } = this.state;
+
+          // 不适用bable写React
+          const element = /*#__PURE__*/ React.createElement("div", {
+            children: [
+              /*#__PURE__*/ React.createElement("div", {
+                className: "header",
+                children: "Header"
+              }),
+              /*#__PURE__*/ React.createElement("div", {
+                className: "content",
+                children: /*#__PURE__*/ React.createElement("ul", {
+                  children: [
+                    /*#__PURE__*/ React.createElement("li", {
+                      children: "\u5217\u8868\u6570\u636E*1"
+                    }),
+                    /*#__PURE__*/ React.createElement("li", {
+                      children: "\u5217\u8868\u6570\u636E*2"
+                    }),
+                    /*#__PURE__*/ React.createElement("li", {
+                      children: "\u5217\u8868\u6570\u636E*3"
+                    }),
+                    /*#__PURE__*/ React.createElement("li", {
+                      children: "\u5217\u8868\u6570\u636E*4"
+                    }),
+                    /*#__PURE__*/ React.createElement("li", {
+                      children: "\u5217\u8868\u6570\u636E*5"
+                    })
+                  ]
+                })
+              }),
+              /*#__PURE__*/ React.createElement("div", {
+                className: "footer",
+                children: "Footer"
+              })
+            ]
+          });
+
+          console.log("虚拟dom", element);
+          // 将下面的结构去到 babel官网可以看到具体的转换
+          return element;
+        }
+      }
+
+      // 1. 创建root 渲染组件App
+      const root = ReactDOM.createRoot(document.getElementById("app"));
+      root.render(React.createElement(App, null));
+    </script>
+  </body>
+</html>

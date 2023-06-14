@@ -1,0 +1,25 @@
+.www-enter {
+  opacity: 0;
+}
+
+.www-enter-active {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.www-exit {
+  opacity: 1;
+}
+
+.www-exit-active {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.www-appear {
+  transform: translateX(-250px);
+}
+.www-appear-active {
+  transform: translateX(0);
+  transition: transform 2s ease;
+}

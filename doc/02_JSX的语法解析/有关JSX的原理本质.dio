@@ -1,0 +1,108 @@
+<mxfile host="65bd71144e">
+    <diagram id="XNsGDdQFQox7_eO0xbPU" name="第 1 页">
+        <mxGraphModel dx="744" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="28" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#000000;" parent="1" source="26" target="27" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="110" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;ul style=&quot;border-color: var(--border-color); box-sizing: border-box; margin: 0.8em 0px; padding-left: 30px; position: relative; color: rgb(51, 51, 51); font-family: &amp;quot;Open Sans&amp;quot;, &amp;quot;Clear Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, &amp;quot;Segoe UI Emoji&amp;quot;, sans-serif; font-size: 16px; text-align: start;&quot; data-mark=&quot;*&quot; class=&quot;ul-list&quot;&gt;&lt;li style=&quot;border-color: var(--border-color); box-sizing: border-box; margin: 0px; position: relative;&quot; class=&quot;md-list-item md-focus-container&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); box-sizing: border-box; line-height: inherit; orphans: 4; margin: 0px 0px 0.5rem; position: relative;&quot; class=&quot;md-end-block md-p md-focus&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); box-sizing: border-box;&quot; class=&quot;md-pair-s md-expand&quot;&gt;&lt;strong style=&quot;border-color: var(--border-color); box-sizing: border-box;&quot;&gt;jsx 仅仅只是 React.createElement(component, props, ...children) 函数的语法糖&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="640" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;h1&gt;元素或组件&lt;/h1&gt;&lt;div&gt;&amp;lt;div title=&quot;a&quot;&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&amp;lt;p&amp;gt; 哈哈哈 &amp;lt;/p&amp;gt;&lt;/div&gt;&lt;div&gt;&amp;lt;/div&amp;gt;&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="130" width="130" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="7" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="270" y="250" as="sourcePoint"/>
+                        <mxPoint x="320" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#CC0000;" parent="1" source="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="630" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="&lt;h1&gt;JSX-&amp;gt;React&lt;br&gt;&lt;/h1&gt;&lt;div&gt;&lt;div&gt;import { jsx as _jsx } from &quot;react/jsx-runtime&quot;;&lt;/div&gt;&lt;div&gt;/*#__PURE__*/ _jsx(&quot;div&quot;, {&lt;/div&gt;&lt;div&gt;&amp;nbsp; title: &quot;a&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; children: /*#__PURE__*/ _jsx(&quot;p&quot;, {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; children: &quot; \u54C8\u54C8\u54C8 &quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; })&lt;/div&gt;&lt;div&gt;});&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="110" width="210" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;dashed=1;" parent="1" source="9" target="11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="450" y="380" as="sourcePoint"/>
+                        <mxPoint x="435" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="创建一个ReactElement对象，&lt;br&gt;组成一个JS的对象树（虚拟DOM）&lt;br&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=7;fontColor=#CC0000;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="315" width="210" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="14" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="14" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;font color=&quot;#000000&quot;&gt;div&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#CC0000;" parent="1" vertex="1">
+                    <mxGeometry x="705" y="120" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;font color=&quot;#000000&quot;&gt;p&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#CC0000;" parent="1" vertex="1">
+                    <mxGeometry x="650" y="175" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#000000;" parent="1" source="16" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#000000;" parent="1" source="16" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="16" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=none;html=1;dashed=1;fontColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="16" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;font color=&quot;#000000&quot;&gt;ul&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#CC0000;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="175" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="&lt;font color=&quot;#000000&quot;&gt;li&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#CC0000;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="230" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;font color=&quot;#000000&quot;&gt;li&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#CC0000;" parent="1" vertex="1">
+                    <mxGeometry x="785" y="230" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;font color=&quot;#000000&quot;&gt;。。。&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#CC0000;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="230" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="真实DOM" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="110" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="React Element对象" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="285" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="29" target="31">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="820" y="450" as="sourcePoint"/>
+                        <mxPoint x="745" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="web" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="IOS/Android控件" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="760" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.438;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="29" target="32">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="746.3461538461538" y="325" as="sourcePoint"/>
+                        <mxPoint x="680" y="440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="实现跨平台" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=3" vertex="1" parent="1">
+                    <mxGeometry x="705" y="400" width="80" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

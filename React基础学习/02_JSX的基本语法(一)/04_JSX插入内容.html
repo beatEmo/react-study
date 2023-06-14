@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="../lib/react.js"></script>
+    <script src="../lib/react-dom.js"></script>
+    <script src="../lib/babel.js"></script>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        constructor() {
+          super();
+          this.state = {
+            message: "Hello World",
+            names: ["12", "dad", "dafrg"],
+            counter: 1,
+
+            a: undefined,
+            b: null,
+            c: true,
+
+            friends: { a: "www" },
+
+            firstName: "John",
+            lastName: "sd",
+
+            age: 20,
+
+            movies: ["独行月球", "流浪地球"]
+          };
+        }
+
+        render() {
+          const { message, names, counter } = this.state;
+          const { a, b, c } = this.state;
+          const { friends } = this.state;
+          const { firstName, lastName } = this.state;
+          const { age } = this.state;
+          const { movies } = this.state;
+
+          return (
+            <div>
+              {/*number string array 直接显示*/}
+              <h2>{message}</h2>
+              <h2>{names}</h2>
+              <h2>{counter}</h2>
+
+              {/* null、undefined、Boolean 不显示 */}
+              <h2>{a}</h2>
+              <h2>{b}</h2>
+              <h2>{c}</h2>
+
+              {/* object不可作为子元素 */}
+              {/* 想展示对象 要将元素直接拿出来展示 */}
+              <h2>{friends.a}</h2>
+
+              {/* 4. 插入表达式 */}
+              <h2>{10 + 20}</h2>
+              <h2>{firstName + lastName}</h2>
+
+              {/* 5. 三元运算符 */}
+              <h2>{age >= 18 ? "成年人" : "未成年人"}</h2>
+
+              {/* 6. 调用方法 */}
+              <ul>
+                {movies.map((movie) => (
+                  <li>{movie}</li>
+                ))}
+              </ul>
+              <ul>{this.getMoviesEls()}</ul>
+            </div>
+          );
+        }
+        getMoviesEls() {
+          return this.state.movies.map((movie) => <li>{movie}</li>);
+        }
+      }
+
+      // 1. 创建root 渲染组件App
+      const root = ReactDOM.createRoot(document.getElementById("app"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
