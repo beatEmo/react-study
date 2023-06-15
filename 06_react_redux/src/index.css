@@ -1,0 +1,10 @@
+.pages {
+  display: flex;
+}
+
+.pages > div {
+  flex: 1;
+  border: 1px solid skyblue;
+  height: 300px;
+  padding: 20px;
+}
