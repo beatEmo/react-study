@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import {
   changeBannersAction,
   changeRecommendsAction
-} from "../store/features/home";
+} from "../store/actionCreators";
 import axios from "axios";
 
 export class Category extends PureComponent {

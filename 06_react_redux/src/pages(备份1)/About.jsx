@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
-import { addNumberAction, subNumberAction } from "../store/features/counter";
+import { addNumberAction, subNumberAction } from "../store/actionCreators";
 
 export class About extends PureComponent {
   calcNumber(num, isAdd) {
@@ -51,9 +51,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mapStateToProps = (state) => ({
-  counter: state.counter.counter,
-  banners: state.home.banners,
-  recommends: state.home.recommends
+  counter: state.counter,
+  banners: state.banners,
+  recommends: state.recommends
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(About);

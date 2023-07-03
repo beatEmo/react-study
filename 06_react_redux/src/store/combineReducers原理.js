@@ -9,10 +9,18 @@ const composeEnhancers =
   compose;
 
 // 合并俩个reducer
-const reducer = combineReducers({
-  counter: counterReducer,
-  home: homeReducer
-});
+// const reducer = combineReducers({
+//   counter: counterReducer,
+//   home: homeReducer
+// });
+
+// combineReducers 原理
+function reducer(state = {}, action) {
+  return {
+    counter: counterReducer(state.counter, action),
+    home: homeReducer(state.home, action)
+  };
+}
 
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
