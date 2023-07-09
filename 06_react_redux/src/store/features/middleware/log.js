@@ -1,0 +1,15 @@
+// 对每次派发的action进行日志打印
+function log(store) {
+  const next = store.dispatch;
+  function logAndDispatch(action) {
+    console.log("当前派发的action：", action);
+    // 真正派发的代码  使用原来的dispatch派发
+    next(action);
+    console.log("派发之后的结果", store.getState());
+  }
+
+  // monkey patch：猴补丁  篡改现有代码，对整体执行逻辑进行修改
+  store.dispatch = logAndDispatch;
+}
+
+export default log;
