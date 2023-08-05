@@ -6,17 +6,21 @@ import ReactDOM from "react-dom/client";
 // import App from "./04_useEffect使用/App";
 // import App from "./05_useContext的使用/App";
 // import App from "./06_useReducer/App";
-import App from "./08_useMemo的使用/App";
+// import App from "./08_useMemo的使用/App";
+// import App from "./09_useRef使用/App";
+// import App from "./11_useLayoutEffect使用/App";
+import App from "./12_自定义Hooks/App";
 
-import { UserContext, ThemeContext } from "./05_useContext的使用/context/index";
+// import { UserContext, ThemeContext } from "./05_useContext的使用/context/index";
+import { UserContext, TokenContext } from "./12_自定义Hooks/context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
   <UserContext.Provider value={{ name: "www", age: 18 }}>
-    <ThemeContext.Provider value={{ color: "red", size: 30 }}>
+    <TokenContext.Provider value={"dasdkjihhjfwektgfhbnui"}>
       <App />
-    </ThemeContext.Provider>
+    </TokenContext.Provider>
   </UserContext.Provider>
   // </React.StrictMode>
 );
